@@ -1,0 +1,5 @@
+[alias]
+	create-pull-request = !sh -c 'stash pull-request \\$0 \\$@'
+[user]
+	name = shanthan
+	email = neelagirishanthan@gmail.com
