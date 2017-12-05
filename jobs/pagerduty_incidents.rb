@@ -24,7 +24,7 @@ SCHEDULER.every '30s' do
       faraday.headers['Authorization'] = "Token token=#{api_key}"
     end
 
-    response = conn.get "/api/v2/services/#{value}"
+    response = conn.get "/services/#{value}"
     json = JSON.parse(response.body)
 
     triggered = json['service']['incident_counts']['triggered']
