@@ -26,7 +26,7 @@ SCHEDULER.every '30s' do
     response = conn.get "/schedules/#{value}/"
     if response.status == 200
       schedule_result = JSON.parse(response.body)
-      user_name = schedule_result['entries'][0]['user']['name']
+      user_name = schedule_result['final_schedule'][0]['rendered_schedule_entries']['user']['summary']
     else
       user_name = 'Shanthan Neelagiri'
     end
